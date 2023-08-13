@@ -1,16 +1,16 @@
-async function taskOne() {
-  return await new Promise(resolve => setTimeout(resolve(`1`),  2000));
+function taskOne() {
+  return new Promise((resolve) => setTimeout(resolve(`1`), 2000));
 }
-async function taskTwo() {
-  return await new Promise(resolve => setTimeout(resolve(`2`), 3000));
+function taskTwo() {
+  return new Promise((resolve) => setTimeout(resolve(`2`), 3000));
 }
-async function taskThree() {
-  return  await new Promise(resolve => setTimeout(resolve(`3`), 1000));
+function taskThree() {
+  return new Promise((resolve) => setTimeout(resolve(`3`), 1000));
 }
 
-const main = async() =>{
+const main = async () => {
   console.log(await taskOne());
   console.log(await taskTwo());
   console.log(await taskThree());
-}
+};
 main();
